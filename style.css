@@ -1,0 +1,83 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #fff;
+  color: #222;
+}
+
+h1 {
+  color: #0095e5;
+  margin-top: 20px;
+  text-align: center;
+}
+
+h3 {
+  color: #0070ad;
+  margin-top: 30px;
+  text-align: center;
+}
+
+nav {
+  text-align: center;
+  background: lightblue;
+  color: black
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #222;
+  color: #fff;
+}
+
+h1 {
+  margin: 0;
+}
+
+.sous-titre {
+  font-style: italic;
+  margin-top: 0.3rem;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-texte {
+  padding: 1.5rem;
+  background: whitesmoke
+  ;
+}
+
+main {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+.grille {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.carte {
+  border: 1px solid #ccc;
+  padding: 1rem;
+}
+
+.carte img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #222;
+  color: whitesmoke;
+}

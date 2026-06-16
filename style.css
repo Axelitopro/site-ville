@@ -29,7 +29,7 @@ nav {
 }
 
 nav a {
-  color: #ccc;
+  color: #cccccc;
   text-decoration: none;
   padding: 0.5rem 1.25rem;
   border-radius: 6px;
@@ -39,11 +39,11 @@ nav a {
 
 nav a:hover {
   background: rgba(255, 255, 255, 0.1);
-  color: #fff;
+  color: black;
 }
 
 nav a.active {
-  background: #0095e5;
+  background: rgb(179, 179, 179);
   color: #fff;
 }
 
@@ -125,7 +125,7 @@ main {
 .carte-contenu h1,
 .carte-contenu h2,
 .carte-contenu h3 {
-  color: #0095e5;
+  color: black;
 }
 
 .carte img {
@@ -166,7 +166,7 @@ main {
 .rdv-card button {
   margin-top: 1rem;
   padding: 0.8rem;
-  background: #0095e5;
+  background: lightgray;
   color: #fff;
   border: none;
   border-radius: 6px;
@@ -177,7 +177,7 @@ main {
 }
 
 .rdv-card button:hover {
-  background: #0070ad;
+  background: lightgray;
 }
 
 .rdv-success {

@@ -1,21 +1,92 @@
 <!DOCTYPE html>
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Auracity - ville légo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auracity — Services de la mairie</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <nav>
     <a href="bienvenue.html">Bienvenue</a>
     <a href="images.html">La ville en images</a>
-    <a href="mairie.html" class="active">À votre service</a>
+    <a href="mairie.html" class="active">Services de la mairie</a>
   </nav>
-    <header>
-    <h1>Auracity</h1>
+
+  <header>
+    <h1><img src="logo.svg" alt="" class="header-logo"> Auracity</h1>
     <p class="sous-titre">Une ville imaginaire</p>
   </header>
 
+  <section class="hero-small">
+    <img src="Mairie.jpg" alt="Mairie d'Auracity">
+    <div class="hero-text">
+      <h1>Services de la mairie</h1>
+      <p>Administration, urbanisme et vie citoyenne</p>
+    </div>
+  </section>
+
   <main>
+    <div class="section-title">
+      <h2>Nos services</h2>
+      <p>La mairie d'Auracity est à votre service pour construire une ville meilleure</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="9" y1="13" x2="15" y2="13"/>
+            <line x1="9" y1="17" x2="13" y2="17"/>
+          </svg>
+        </div>
+        <div class="service-text">
+          <h4>État civil</h4>
+          <p>Déclarations de naissance, mariages et décès pour tous les citoyens d'Auracity.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 22L12 2l10 20"/>
+            <line x1="7" y1="22" x2="17" y2="22"/>
+            <line x1="12" y1="2" x2="12" y2="14"/>
+            <path d="M9 14h6l-3 8"/>
+          </svg>
+        </div>
+        <div class="service-text">
+          <h4>Permis de construire</h4>
+          <p>Autorisations pour toute nouvelle construction Lego dans la ville.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="13 2 4 13 10 13 9 22 20 11 14 11 15 2"/>
+          </svg>
+        </div>
+        <div class="service-text">
+          <h4>E-mobility SAP</h4>
+          <p>Gestion des bornes de recharge électrique et du logiciel e-mobility.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2C8 2 4 4 4 8v2c0 6 8 12 8 12s8-6 8-12V8c0-4-4-6-8-6z"/>
+          </svg>
+        </div>
+        <div class="service-text">
+          <h4>Sécurité</h4>
+          <p>Surveillance assurée par Batman (aura) et son garde à l'arbalète.</p>
+        </div>
+      </div>
+    </div>
     <h2>Planifier un rendez-vous à la mairie</h2>
     <p class="sous-titre">Rencontrez le maire ou un conseiller pour vos démarches.</p>
 
@@ -44,7 +115,7 @@
     <div id="rdv-result"></div>
   </main>
 
-  <script>
+   <script>
     function reserver() {
       const name = document.getElementById('rdv-name').value.trim();
       const dateStr = document.getElementById('rdv-date').value;
@@ -71,8 +142,15 @@
       window.open(`https://calendar.google.com/calendar/render?${params}`, '_blank');
 
       document.getElementById('rdv-result').innerHTML =
-        `<div class="rdv-success">✔ Rendez-vous créé sur Google Agenda ! <a href="https://calendar.google.com/calendar/render?${params}" target="_blank">Rouvrir</a></div>`;
+        `<div class="rdv-success">Rendez-vous créé sur Google Agenda ! <a href="https://calendar.google.com/calendar/render?${params}" target="_blank">Rouvrir</a></div>`;
     }
   </script>
+
+  <footer>
+    <div class="footer-logo">
+      <img src="logo.svg" alt="Auracity">
+      <span>Auracity&amp;Co</span>
+    </div>
+  </footer>
 </body>
-</html> 
+</html>

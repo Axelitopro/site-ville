@@ -1,48 +1,74 @@
 <!DOCTYPE html>
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Auracity - ville légo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auracity — Ville Lego</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <nav>
     <a href="bienvenue.html" class="active">Bienvenue</a>
     <a href="images.html">La ville en images</a>
-    <a href="mairie.html">À votre service</a>
+    <a href="mairie.html">Services de la mairie</a>
   </nav>
+
   <header>
-    <h1>Auracity</h1>
+    <h1><img src="logo.svg" alt="" class="header-logo"> Auracity</h1>
     <p class="sous-titre">Une ville imaginaire</p>
   </header>
-    <section class="hero">
-       <img src="Ville.jpg">
-       <div class="hero-overlay">
-           <h1>Bienvenue au portail de Auracity</h1>
-           <h3>La ville ou tout est incroyable, même la prison</h3>
-       </div>
-     </section>
-     <main>
-         <h2>Actualités</h2>
-         <div class="grille">
-             <article class="carte">
-                 <div class="carte-contenu">
-                     <h3>Nouveau quartier en construction</h3>
-                     <p>Le quartier des Lumières accueillera bientôt ses premiers habitants. Un projet moderne et écologique.</p>
-                 </div>
-             </article>
-             <article class="carte">
-                 <div class="carte-contenu">
-                     <h3>Fête de la musique</h3>
-                     <p>Ne manquez pas la fête de la musique le 21 juin sur la place centrale.</p>
-                 </div>
-             </article>
-             <article class="carte">
-                 <div class="carte-contenu">
-                     <h3>Marché de Noël</h3>
-                     <p>Le marché de Noël revient du 1er au 24 décembre avec de nombreuses surprises.</p>
-                 </div>
-             </article>
-         </div>
-     </main>
+
+  <section class="hero-full">
+    <img src="Ville.jpg" alt="Vue d'Auracity">
+    <div class="hero-text">
+      <h1>Bienvenue à <span class="highlight">Auracity</span></h1>
+      <p>La ville où tout est incroyable, même la prison</p>
+    </div>
+  </section>
+
+  <div class="features">
+    <div class="feature-card">
+      <div class="feature-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 21V11l9-7 9 7v10"/>
+          <path d="M5 21h14"/>
+          <path d="M8 21v-7h8v7"/>
+          <path d="M8 14h8"/>
+        </svg>
+      </div>
+      <h3>Une ville vivante</h3>
+      <p>Mairie, école, lac, clubhouse, prison et quartiers résidentiels: tout ce qu'il faut pour une communauté prospère.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="4" width="7" height="5"/>
+          <rect x="14" y="4" width="7" height="5"/>
+          <rect x="3" y="15" width="7" height="5"/>
+          <rect x="14" y="15" width="7" height="5"/>
+          <line x1="10" y1="6.5" x2="14" y2="6.5"/>
+          <line x1="10" y1="17.5" x2="14" y2="17.5"/>
+        </svg>
+      </div>
+      <h3>Entièrement en Lego</h3>
+      <p>Chaque bâtiment, chaque rue, chaque détail est construit en briques Lego avec passion et créativité.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="13 2 4 13 10 13 9 22 20 11 14 11 15 2"/>
+        </svg>
+      </div>
+      <h3>Technologie moderne</h3>
+      <p>Bornes électriques e-mobility SAP, infrastructures connectées: Auracity conjugue tradition et innovation.</p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-logo">
+      <img src="logo.svg" alt="Auracity">
+      <span>Auracity&amp;Co</span>
+    </div>
+  </footer>
 </body>
 </html>

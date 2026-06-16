@@ -14,5 +14,65 @@
     <h1>Auracity</h1>
     <p class="sous-titre">Une ville imaginaire</p>
   </header>
+
+  <main>
+    <h2>Planifier un rendez-vous à la mairie</h2>
+    <p class="sous-titre">Rencontrez le maire ou un conseiller pour vos démarches.</p>
+
+    <div class="rdv-card">
+      <label for="rdv-name">Votre nom</label>
+      <input type="text" id="rdv-name" placeholder="Ex: Jean Dupont">
+
+      <label for="rdv-date">Date et heure</label>
+      <input type="datetime-local" id="rdv-date">
+
+      <label for="rdv-motif">Motif du rendez-vous</label>
+      <select id="rdv-motif">
+        <option value="Demande de permis de construire">Demande de permis de construire</option>
+        <option value="Inscription scolaire">Inscription scolaire</option>
+        <option value="Problème de voisinage">Problème de voisinage</option>
+        <option value="Demande de logement">Demande de logement</option>
+        <option value="Autre">Autre</option>
+      </select>
+
+      <label for="rdv-desc">Description (optionnelle)</label>
+      <textarea id="rdv-desc" rows="3" placeholder="Détails de votre demande…"></textarea>
+
+      <button onclick="reserver()">Réserver sur Google Agenda</button>
+    </div>
+
+    <div id="rdv-result"></div>
+  </main>
+
+  <script>
+    function reserver() {
+      const name = document.getElementById('rdv-name').value.trim();
+      const dateStr = document.getElementById('rdv-date').value;
+      const motif = document.getElementById('rdv-motif').value;
+      const desc = document.getElementById('rdv-desc').value.trim();
+
+      if (!name || !dateStr) {
+        alert('Veuillez remplir votre nom et choisir une date.');
+        return;
+      }
+
+      const start = new Date(dateStr);
+      const end = new Date(start.getTime() + 60 * 60 * 1000);
+      const fmt = (d) => d.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
+      const params = new URLSearchParams({
+        action: 'TEMPLATE',
+        text: `${motif} — ${name}`,
+        details: desc || motif,
+        dates: `${fmt(start)}/${fmt(end)}`,
+        location: 'Mairie d\'Auracity',
+        sf: 'true',
+        output: 'xml'
+      });
+      window.open(`https://calendar.google.com/calendar/render?${params}`, '_blank');
+
+      document.getElementById('rdv-result').innerHTML =
+        `<div class="rdv-success">✔ Rendez-vous créé sur Google Agenda ! <a href="https://calendar.google.com/calendar/render?${params}" target="_blank">Rouvrir</a></div>`;
+    }
+  </script>
 </body>
 </html> 
